@@ -6,6 +6,11 @@
 2. **生命周期价值 (LTV)**：不同渠道用户的累计变现贡献（D1 LTV / D7 LTV）是否能够覆盖获客成本？
 3. **策略优化建议**：如何通过数据驱动，对营销预算分配与产品留存策略进行优化？
 
+### 仪表盘动态交互演示 (Interactive Dashboard Preview)
+
+> 💡 **交互说明**：通过点击左侧买量渠道（Channel）与国家（Country）切片器，可动态联动查看各 Cohort 组的留存衰减曲线与 D1/D7 LTV 累计变现走势。
+
+![Power BI Dashboard Demo](reports/dashboard_demo.gif)
 ---
 
 ## 2. 数据架构与模型 (Data Architecture)
@@ -49,3 +54,8 @@ GROUP BY u.channel;
 - **预算调优**：建议减少 15% 的 TikTok 渠道低效买量预算，倾斜至 Facebook_Ads 与 Google_Ads。
 - **产品干预**：针对 TikTok 渠道用户，在注册后 24 小时内（D0-D1）优化新手引导（Onboarding）流程，提升次留转化。
 
+## 📁 项目完整资源导航 (Repository Navigation)
+- 🗄️ **数据字典**：[data/data_dictionary.md](data/data_dictionary.md)
+- 💻 **SQL 源码**：[留存计算 01_cohort_retention.sql](sql/01_cohort_retention.sql) | [LTV 模型 02_ltv_arpu_models.sql](sql/02_ltv_arpu_models.sql)
+- 🧮 **DAX 代码库**：[reports/dax_measures.md](reports/dax_measures.md)
+- 📊 **Power BI 源文件下载**：[reports/App_Analytics_Dashboard.pbix](reports/App_Analytics_Dashboard.pbix)
